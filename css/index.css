@@ -1,13 +1,13 @@
 body {
     width: 100vw;
     height: 100vh;
-    /*background: linear-gradient(#060D1B, #20274A);*/
+    background: linear-gradient(#060D1B, #20274A);
     overflow: hidden;
     margin: 0;
 }
 
 .neurology-1 {
-    background-image: url("../static/back.png");
+    background-image: url("../static/group-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -20,3 +20,12 @@ body {
 /*    left: 50%;*/
 /*    transform: translateX(-50%);*/
 /*}*/
+
+.neurology-background-angles {
+    width: 530px;
+    height: 613px;
+    flex-shrink: 0;
+    background: #8488B1;
+    mix-blend-mode: color;
+    filter: blur(38.849998474121094px);
+}
