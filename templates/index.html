@@ -5,10 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="../css/index.css">
     <title>Document</title>
 </head>
 <body>
+    <section class="neurology-1">
+        <div class="neurology-background-angles">
 
+        </div>
+        <p class="test"></p>
+    </section>
+    <script src="../js/index.js">
+        let tg = window.Telegram.WebApp;
+
+        tg.expand()
+
+        element = document.querySelector(".test");
+
+        element.innerHTML = tg.initDataUnsafe.user.username;
+
+    </script>
 </body>
 </html>
