@@ -194,6 +194,7 @@ body {
 
 .circle-moon {
     position: relative;
+    mix-blend-mode: lighten;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -256,6 +257,7 @@ body {
 
 .neurology-2-background-moon {
     position: relative;
+    mix-blend-mode: lighten;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -333,6 +335,7 @@ body {
     border-top: 0;
     border-color: #FDFDFF;
     padding: 10px;
+    text-align: center;
 }
 
 .neurology-2-input::placeholder {
@@ -347,6 +350,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    text-align: center;
 }
 
 .neurology-2-input:focus {
@@ -413,6 +417,7 @@ body {
 .neurology-4-background-moon,
 .neurology-5-background-moon {
     position: relative;
+    mix-blend-mode: lighten;
     width: 100vw;
     height: 100vh;
     display: flex;
