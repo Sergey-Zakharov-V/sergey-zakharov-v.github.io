@@ -442,7 +442,7 @@ body {
 .neurology-4-background-moon-img,
 .neurology-5-background-moon-img {
     position: absolute;
-    top: 60%;
+    top: 40%;
     background: url(<path-to-image>) center/cover no-repeat;
     mix-blend-mode: lighten;
     width: 1112.109px; /* Замените это на фактическую ширину изображения */
