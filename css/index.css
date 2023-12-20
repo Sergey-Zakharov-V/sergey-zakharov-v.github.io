@@ -12,6 +12,13 @@ button:active {
     scale: 1.1;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
 body {
     background: linear-gradient(#060D1B, #20274A);
     margin: 0;
