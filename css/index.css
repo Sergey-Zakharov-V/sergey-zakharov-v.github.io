@@ -29,8 +29,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
-    position: absolute;
     height: 100vh;
+    display: block;
 }
 
 .neurology-1,
@@ -41,7 +41,7 @@ body {
 .neurology-6,
 .neurology-7,
 .neurology-8 {
-    height: 0;
+    display: none;
 }
 
 .neurology-background {
