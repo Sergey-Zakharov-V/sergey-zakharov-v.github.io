@@ -194,7 +194,6 @@ body {
 
 .circle-moon {
     position: relative;
-    mix-blend-mode: lighten;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -204,11 +203,11 @@ body {
 
 .circle-moon-img {
     position: absolute;
-    top: -64%;
+    top: -66%;
     background: url(<path-to-image>) center/cover no-repeat;
     mix-blend-mode: lighten;
-    width: 1112.109px; /* Замените это на фактическую ширину изображения */
-    height: 625.636px; /* Замените это на фактическую высоту изображения */
+    width: 1570.109px; /* Замените это на фактическую ширину изображения */
+    /*height: 625.636px; !* Замените это на фактическую высоту изображения *!*/
     flex-shrink: 0;
 }
 
@@ -257,7 +256,6 @@ body {
 
 .neurology-2-background-moon {
     position: relative;
-    mix-blend-mode: lighten;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -415,7 +413,6 @@ body {
 .neurology-4-background-moon,
 .neurology-5-background-moon {
     position: relative;
-    mix-blend-mode: lighten;
     width: 100vw;
     height: 100vh;
     display: flex;
