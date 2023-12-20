@@ -1,21 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /*overflow-y: scroll;*/
+}
+
+button:active {
+    scale: 1.1;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
     background: linear-gradient(#060D1B, #20274A);
     overflow: hidden;
     margin: 0;
 }
 
-.neurology-1 {
+.neurology-1.open,
+.neurology-2.open,
+.neurology-3.open,
+.neurology-4.open,
+.neurology-5.open,
+.neurology-6.open,
+.neurology-7.open,
+.neurology-8.open {
     background-image: url("../static/group-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
     position: absolute;
+    max-height: 100vh;
+}
+
+.neurology-1,
+.neurology-2,
+.neurology-3,
+.neurology-4,
+.neurology-5,
+.neurology-6,
+.neurology-7,
+.neurology-8 {
+    max-height: 0;
 }
 
 .neurology-background {
+    max-width: 1300px;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -43,11 +73,14 @@ body {
 .neurology-background-angles {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 
 .neurology-background-angles-img {
     position: absolute;
+    max-width: 1300px;
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
@@ -160,16 +193,602 @@ body {
 }
 
 .circle-moon {
-    width: 200vw;
+    position: relative;
+    mix-blend-mode: lighten;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle-moon-img {
-    position: fixed;
-    bottom: -76%;
+    position: absolute;
+    top: -64%;
+    background: url(<path-to-image>) center/cover no-repeat;
+    mix-blend-mode: lighten;
+    width: 1112.109px; /* Замените это на фактическую ширину изображения */
+    height: 625.636px; /* Замените это на фактическую высоту изображения */
+    flex-shrink: 0;
+}
+
+
+.circle-moon-img {
+    animation: circle-moon-img 20s linear infinite;
+}
+
+@keyframes circle-moon-img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*второй экран*/
+
+/*.neurology-2-background {*/
+/*    background-image: url("../static/tuman.png");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    width: 100vw;*/
+/*    height: 124vh;*/
+/*    position: absolute;*/
+/*    top: -98px;*/
+/*}*/
+
+.neurology-2-background-angles {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.neurology-2-background-angles-img {
+    position: absolute;
+    top: 98px;
+    max-width: 1300px;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    mix-blend-mode: exclusion;
+}
+
+.neurology-2-background-moon {
+    position: relative;
+    mix-blend-mode: lighten;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neurology-2-background-moon-img {
+    position: absolute;
+    top: 60%;
+    background: url(<path-to-image>) center/cover no-repeat;
+    mix-blend-mode: lighten;
+    width: 1112.109px; /* Замените это на фактическую ширину изображения */
+    height: 625.636px; /* Замените это на фактическую высоту изображения */
+    flex-shrink: 0;
+}
+
+.neurology-2-background-moon-img {
+    animation: neurology-2-background-moon-img 20s linear infinite;
+}
+
+@keyframes neurology-2-background-moon-img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.neurology-2-info {
+    position: absolute;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    width: 350vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.neurology-2-info-text {
+    color: #FFE6CD;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.neurology-2-input-and-button {
+    width: 100vw;
     height: 100vh;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    position: relative;
+}
+
+.neurology-2-input-and-button-container {
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neurology-2-input {
+    margin-bottom: 50px;
+    background-color: transparent;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-color: #FDFDFF;
+    padding: 10px;
+}
+
+.neurology-2-input::placeholder {
+    color: #FDFDFF;
+    font-family: Philosopher, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.neurology-2-input:focus {
+    font-family: Philosopher, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.44px;
+    font-size: 18px;
+    color: #FDFDFF;
+    outline: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.neurology-2-input:valid {
+    font-family: Philosopher, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.44px;
+    font-size: 18px;
+    color: #FDFDFF;
+    outline: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.neurology-2-button {
+    color: #7B6644;
+    font-family: Philosopher, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    width: 200px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0;
+    background: linear-gradient(143deg, #DEC3A8 14.83%, #FFEDDA 47.68%, #DEC3A8 78.55%);
+    box-shadow: 0px 4px 0px 0px #AF9F8E;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*3 экран*/
+
+.neurology-3-background,
+.neurology-2-background,
+.neurology-4-background {
+    background-image: url("../static/tuman.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 124vh;
+    position: absolute;
+    top: -98px;
+}
+
+.neurology-3-background-moon,
+.neurology-4-background-moon,
+.neurology-5-background-moon {
+    position: relative;
     mix-blend-mode: lighten;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neurology-3-background-moon-img,
+.neurology-4-background-moon-img,
+.neurology-5-background-moon-img {
+    position: absolute;
+    top: 60%;
+    background: url(<path-to-image>) center/cover no-repeat;
+    mix-blend-mode: lighten;
+    width: 1112.109px; /* Замените это на фактическую ширину изображения */
+    height: 625.636px; /* Замените это на фактическую высоту изображения */
+    flex-shrink: 0;
+}
+
+.neurology-3-background-moon-img {
+    animation: neurology-3-background-moon-img 20s linear infinite;
+}
+
+.neurology-4-background-moon-img {
+    animation: neurology-4-background-moon-img 20s linear infinite;
+}
+
+@keyframes neurology-3-background-moon-img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes neurology-4-background-moon-img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.neurology-3-background-angles,
+.neurology-4-background-angles,
+.neurology-5-background-angles,
+.neurology-6-background-angles {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.neurology-3-background-angles-img,
+.neurology-4-background-angles-img,
+.neurology-5-background-angles-img,
+.neurology-6-background-angles-img {
+    position: absolute;
+    top: 98px;
+    max-width: 1300px;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    mix-blend-mode: exclusion;
+}
+
+.neurology-3-info, .neurology-4-info, .neurology-5-info {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.neurology-3-info-text, .neurology-4-info-text, .neurology-5-info-text {
+    color: #FFE6CD;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.neurology-3-buttons {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neurology-3-buttons-men-and-women {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 2px;
+
+}
+
+.neurology-3-button-men, .neurology-3-button-women {
+    width: 150px;
+    height: 96px;
+    border-radius: 10px;
+    border: 1px solid #FBFCFF;
+    background-color: transparent;
+    box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.20);
+
+}
+
+.neurology-3-button-men-img, .neurology-3-button-women-img {
+    width: 28px;
+    height: 28px;
+}
+
+.neurology-3-button-men-text, .neurology-3-button-women-text {
+    color: #FFF;
+    font-family: Philosopher, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+}
+
+
+.neurology-3-button {
+    position: absolute;
+    bottom: 60px;
+    color: #7B6644;
+    font-family: Philosopher, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    width: 200px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0;
+    background: linear-gradient(143deg, #DEC3A8 14.83%, #FFEDDA 47.68%, #DEC3A8 78.55%);
+    box-shadow: 0px 4px 0px 0px #AF9F8E;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*4 экран*/
+
+.neurology-4-info-date-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10px;
+    margin-top: 50px;
+}
+
+.neurology-4-info-date-day-container,
+.neurology-4-info-date-month-container,
+.neurology-4-info-date-year-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.neurology-4-info-date-day,
+.neurology-4-info-date-month {
+    width: 74px;
+    height: 38px;
+    border-radius: 1000px;
+    background: #FFF;
+    border: 0 solid;
+    box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.20);
+    color: #3C4069;
+    font-family: Philosopher, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.neurology-4-info-date-year {
+    width: 116px;
+    height: 38px;
+    border: 0 solid;
+    border-radius: 1000px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.20);
+    color: #3C4069;
+    font-family: Philosopher, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.neurology-4-info-date-day-info {
+    margin-top: 4px;
+    color: #FFF;
+    font-family: Philosopher, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.neurology-4-info-date-img {
+    margin-left: 10px;
+}
+
+.neurology-4-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.neurology-4-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #7B6644;
+    font-family: Philosopher, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    width: 200px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0;
+    background: linear-gradient(143deg, #DEC3A8 14.83%, #FFEDDA 47.68%, #DEC3A8 78.55%);
+    box-shadow: 0px 4px 0px 0px #AF9F8E;
+    margin-bottom: 10px;
+}
+
+.neurology-4-info {
+    height: 100vh;
+}
+
+/*5 экран*/
+
+.neurology-5-background {
+    background-image: url("../static/back_6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 124vh;
+    position: absolute;
+    top: -98px;
+}
+
+.neurology-5-info-min-moons,
+.neurology-1-info-min-moons {
+    width: 64px;
+    height: 54px;
+}
+
+.neurology-5-info {
+    padding: 0 20px;
+}
+
+.neurology-5-info-text {
+    margin-bottom: 24px;
+}
+
+.neurology-5-result-container {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16.200000762939453px);
+    margin-bottom: 24px;
+    padding: 20px;
+}
+
+.neurology-5-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #7B6644;
+    font-family: Philosopher, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.07px;
+    width: 200px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0;
+    background: linear-gradient(143deg, #DEC3A8 14.83%, #FFEDDA 47.68%, #DEC3A8 78.55%);
+    box-shadow: 0px 4px 0px 0px #AF9F8E;
+    margin-bottom: 10px;
+}
+
+.neurology-5-result-title {
+    color: #FFF;
+    font-family: Philosopher, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.neurology-5-rezult-1, .neurology-5-rezult-2 {
+    color: #FFF;
+    font-family: Philosopher, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.neurology-3-background-moon-img {
+    animation: neurology-3-background-moon-img 20s linear infinite;
+}
+
+.neurology-5-background-moon-img {
+    animation: neurology-5-background-moon-img 20s linear infinite;
+}
+
+@keyframes neurology-5-background-moon-img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*6 экран*/
+
+.neurology-6-background {
+    background-image: url("../static/back_7.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 124vh;
+    position: absolute;
+    top: -98px;
 }
