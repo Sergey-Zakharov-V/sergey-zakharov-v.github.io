@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    overflow: hidden;
     padding: 0;
     text-decoration: none;
     list-style: none;
@@ -13,7 +14,6 @@ button:active {
 
 body {
     background: linear-gradient(#060D1B, #20274A);
-    overflow: hidden;
     margin: 0;
 }
 
